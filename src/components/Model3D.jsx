@@ -31,11 +31,11 @@ const Model3D = () => {
   return (
     <section className="py-20 px-6">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-black mb-12">
-          Modelo <span className="text-yellow-400">3D</span>
+        <h2 className="text-4xl font-black mb-12 text-gray-900 dark:text-white">
+          Modelo <span className="text-yellow-500 dark:text-yellow-400">3D</span>
         </h2>
 
-        <div className="bg-gray-900 rounded-2xl overflow-hidden" style={{ height: '500px' }}>
+        <div className="bg-gray-100 dark:bg-gray-900 rounded-2xl overflow-hidden" style={{ height: '500px' }}>
           <ErrorBoundary>
 <Canvas camera={{ position: [5, 5, 5], fov: 75 }}>
   <ambientLight intensity={0.5} />

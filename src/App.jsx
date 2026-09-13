@@ -1,17 +1,17 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import Skills from './components/Skills'
-import Projects from './components/Projects'
+import WebProjects from './components/WebProjects'
+import IndustrialProjects from './components/IndustrialProjects'
 import Contact from './components/Contact'
 import Model3D from './components/Model3D'
 
 function App() {
   return (
-    <main className="bg-gray-950 text-white min-h-screen">
+    <main className="bg-white text-gray-900 dark:bg-gray-950 dark:text-white min-h-screen transition-colors duration-300">
       <Navbar />
       <Hero />
-      <Skills />
-      <Projects />
+      <IndustrialProjects />
+      <WebProjects />      
       <Contact />
       <Model3D />
     </main>
