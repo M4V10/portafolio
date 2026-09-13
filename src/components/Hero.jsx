@@ -10,8 +10,7 @@ const Hero = () => {
           Diseñador Industrial <span className="text-gray-900 dark:text-white">&</span> Desarrollador Web
         </p>
         <p className="text-gray-500 max-w-xl text-lg mb-10">
-          Diseño Industrial + Desarrollo Digital
-          Del modelamiento 3D/BIM al desarrollo web
+           Del modelamiento 3D/BIM al desarrollo web
         </p>
         <div className="flex gap-4">
           <a href="#web-projects" className="bg-yellow-500 dark:bg-yellow-400 text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-yellow-400 dark:hover:bg-yellow-300 transition">
