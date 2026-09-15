@@ -29,29 +29,23 @@ const GLBModel = () => {
 
 const Model3D = () => {
   return (
-    <section className="py-20 px-6">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-4xl font-black mb-12 text-gray-900 dark:text-white">
-          Modelo <span className="text-yellow-500 dark:text-yellow-400">3D</span>
-        </h2>
-
-        <div className="bg-gray-100 dark:bg-gray-900 rounded-2xl overflow-hidden" style={{ height: '500px' }}>
-          <ErrorBoundary>
-<Canvas camera={{ position: [5, 5, 5], fov: 75 }}>
-  <ambientLight intensity={0.5} />
-  <directionalLight position={[10, 10, 5]} intensity={1} />
-  <Suspense fallback={null}>
-    <GLBModel />
-  </Suspense>
-  <OrbitControls makeDefault autoRotate={false} />
-</Canvas>
-          </ErrorBoundary>
-        </div>
-        <p className="text-gray-500 text-sm mt-4 text-center">
-          Arrastra para rotar · Scroll para zoom
-        </p>
+    <div className="w-full">
+      <div className="bg-gray-100 dark:bg-gray-950 rounded-2xl overflow-hidden" style={{ height: '420px' }}>
+        <ErrorBoundary>
+          <Canvas camera={{ position: [5, 5, 5], fov: 75 }}>
+            <ambientLight intensity={0.5} />
+            <directionalLight position={[10, 10, 5]} intensity={1} />
+            <Suspense fallback={null}>
+              <GLBModel />
+            </Suspense>
+            <OrbitControls makeDefault autoRotate={false} />
+          </Canvas>
+        </ErrorBoundary>
       </div>
-    </section>
+      <p className="text-gray-500 text-sm mt-4 text-center">
+        Arrastra para rotar · Scroll para zoom
+      </p>
+    </div>
   )
 }
 

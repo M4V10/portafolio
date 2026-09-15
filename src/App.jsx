@@ -1,9 +1,8 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import WebProjects from './components/WebProjects'
 import IndustrialProjects from './components/IndustrialProjects'
+import WebProjects from './components/WebProjects'
 import Contact from './components/Contact'
-import Model3D from './components/Model3D'
 
 function App() {
   return (
@@ -11,9 +10,8 @@ function App() {
       <Navbar />
       <Hero />
       <IndustrialProjects />
-      <WebProjects />      
+      <WebProjects />
       <Contact />
-      <Model3D />
     </main>
   )
 }
