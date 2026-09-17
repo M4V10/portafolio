@@ -1,4 +1,5 @@
 import { useTheme } from '../context/useTheme'
+import { useSmoothScroll } from '../context/useSmoothScroll'
 
 const SunIcon = (props) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -30,16 +31,37 @@ const ThemeToggle = () => {
   )
 }
 
+const NAV_LINKS = [
+  { href: '#industrial-projects', label: 'Diseño Industrial' },
+  { href: '#web-projects', label: 'Proyectos Web' },
+  { href: '#contact', label: 'Contacto' },
+]
+
 const Navbar = () => {
+  const { scrollTo } = useSmoothScroll()
+
+  const handleNavClick = (e, href) => {
+    e.preventDefault()
+    scrollTo(href)
+  }
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm z-50 px-6 py-4 transition-colors duration-300">
       <div className="max-w-5xl mx-auto flex justify-between items-center">
         <span className="text-yellow-500 dark:text-yellow-400 font-bold text-xl">Pablo</span>
         <div className="flex items-center gap-6">
           <ul className="flex gap-6 text-gray-600 dark:text-gray-400">
-            <li><a href="#industrial-projects" className="hover:text-yellow-500 dark:hover:text-yellow-400 transition">Diseño Industrial</a></li>
-            <li><a href="#web-projects" className="hover:text-yellow-500 dark:hover:text-yellow-400 transition">Proyectos Web</a></li>
-            <li><a href="#contact" className="hover:text-yellow-500 dark:hover:text-yellow-400 transition">Contacto</a></li>
+            {NAV_LINKS.map(({ href, label }) => (
+              <li key={href}>
+                <a
+                  href={href}
+                  onClick={(e) => handleNavClick(e, href)}
+                  className="hover:text-yellow-500 dark:hover:text-yellow-400 transition"
+                >
+                  {label}
+                </a>
+              </li>
+            ))}
           </ul>
           <ThemeToggle />
         </div>

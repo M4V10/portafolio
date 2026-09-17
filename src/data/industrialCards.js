@@ -7,9 +7,9 @@ import { placeholderImage } from '../utils/placeholderImage'
 
 export const industrialCards = [
   {
-    title: 'Diseño BIM',
-    description: 'Modelado y coordinación de proyectos industriales usando Revit y Navisworks.',
-    image: placeholderImage('Diseño BIM', 0),
+    title: 'Proyecto Full Sal-BHP',
+    description: 'Modelado y coordinación.',
+    image: placeholderImage('Proyecto Full Sal-BHP', 0),
   },
   {
     title: 'Modelado 3D',
