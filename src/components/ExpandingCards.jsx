@@ -4,6 +4,7 @@
 import { motion } from 'motion/react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useState, useRef, useEffect, useMemo } from 'react'
+import { placeholderImage } from '../utils/placeholderImage'
 
 const DEFAULT_BREAKPOINTS = [
   {
@@ -21,6 +22,19 @@ const DEFAULT_BREAKPOINTS = [
     titleInactive: '17px',
   },
 ]
+
+const CardImage = ({ src, title, className }) => {
+  const [imgSrc, setImgSrc] = useState(src)
+
+  return (
+    <img
+      src={imgSrc}
+      alt={title}
+      onError={() => setImgSrc(placeholderImage(title))}
+      className={className}
+    />
+  )
+}
 
 export function ExpandingCards({
   cards,
@@ -98,9 +112,9 @@ export function ExpandingCards({
             transition={{ duration: transitionDuration }}
             onClick={() => handleCardClick(index)}
           >
-            <img
+            <CardImage
               src={card.image}
-              alt={card.title}
+              title={card.title}
               className={`absolute inset-0 w-full h-full object-cover ${classNames?.image || ''}`}
             />
             <div
