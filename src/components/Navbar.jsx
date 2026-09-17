@@ -48,7 +48,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm z-50 px-6 py-4 transition-colors duration-300">
       <div className="max-w-5xl mx-auto flex justify-between items-center">
-        <span className="text-yellow-500 dark:text-yellow-400 font-bold text-xl">Pablo</span>
+        <span className="text-yellow-500 dark:text-yellow-400 font-bold text-xl">Pablo Navarro</span>
         <div className="flex items-center gap-6">
           <ul className="flex gap-6 text-gray-600 dark:text-gray-400">
             {NAV_LINKS.map(({ href, label }) => (
@@ -61,6 +61,7 @@ const Navbar = () => {
                   {label}
                 </a>
               </li>
+              
             ))}
           </ul>
           <ThemeToggle />

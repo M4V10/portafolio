@@ -17,25 +17,13 @@ const Hero = () => {
     <section className="min-h-screen flex items-center px-6 pt-20">
       <div className="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div>
-          <p className="text-yellow-500 dark:text-yellow-400 text-lg mb-4 tracking-widest uppercase">Hola, soy</p>
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-black text-gray-900 dark:text-white leading-none mb-6">
-            Pablo
+          <p className="text-yellow-250 dark:text-yellow-250 text-lg mb-4 tracking-widest uppercase">Hola, soy</p>
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white leading-none mb-6">
+            Diseño industrial, modelamiento BIM y desarrollo digital.
           </h1>
-          <ShinyText
-            text="Diseñador Industrial & Desarrollador Web"
-            speed={3}
-            delay={0}
-            color={isDark ? '#b5b5b5' : '#4b5563'}
-            shineColor={isDark ? '#ffffff' : '#111827'}
-            spread={120}
-            direction="left"
-            yoyo={false}
-            pauseOnHover={false}
-            disabled={false}
-            className="text-2xl md:text-3xl font-light mb-8"
-          />
+          
           <p className="text-gray-500 max-w-xl text-lg mb-10">
-            Del modelamiento 3D/BIM al desarrollo web
+            10+ years designing the systems, brands and AI workflows behind products people actually use, serving millions of users every day.
           </p>
           <div className="flex gap-4">
             <a

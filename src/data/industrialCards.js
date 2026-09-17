@@ -14,7 +14,7 @@ export const industrialCards = [
   {
     title: 'Proyecto Nitrobio Innovación-BHP',
     description: 'Modelado y coordinación.',
-    image: '/img/proyectos/2.png',
+    image: '/img/proyectos/2.jpg',
   },
   {
     title: 'Proyecto AMSA Antucoya',
