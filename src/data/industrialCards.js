@@ -1,9 +1,7 @@
-import { placeholderImage } from '../utils/placeholderImage'
-
 // Datos de la galería "Expanding Cards" de Diseño Industrial.
-// Reemplazá "image" por la ruta real de tu foto en /public/img/proyectos/
-// cuando la tengas (ej: "/img/proyectos/1.png"). Mientras tanto se
-// muestra un placeholder generado localmente con el título del proyecto.
+// Poné tus fotos reales en public/img/proyectos/ y referencialas con
+// la ruta que empieza en "/img/proyectos/...". Si algún archivo falta
+// o no carga, ExpandingCards.jsx muestra un placeholder automáticamente.
 
 export const industrialCards = [
   {

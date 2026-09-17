@@ -1,12 +1,9 @@
 import Model3D from './Model3D'
 import ShinyText from './ShinyText'
-import { useTheme } from '../context/useTheme'
 import { useSmoothScroll } from '../context/useSmoothScroll'
 
 const Hero = () => {
-  const { theme } = useTheme()
   const { scrollTo } = useSmoothScroll()
-  const isDark = theme === 'dark'
 
   const handleClick = (e, href) => {
     e.preventDefault()

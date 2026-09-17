@@ -1,5 +1,6 @@
 import { useTheme } from '../context/useTheme'
 import { useSmoothScroll } from '../context/useSmoothScroll'
+import TextType from './TextType'
 
 const SunIcon = (props) => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
@@ -48,7 +49,20 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/90 dark:bg-gray-950/90 backdrop-blur-sm z-50 px-6 py-4 transition-colors duration-300">
       <div className="max-w-5xl mx-auto flex justify-between items-center">
-        <span className="text-yellow-500 dark:text-yellow-400 font-bold text-xl">Pablo Navarro</span>
+        <div className="flex flex-col leading-tight">
+          <span className="text-yellow-500 dark:text-yellow-400 font-bold text-xl">Pablo Navarro</span>
+          <TextType
+            text={['Diseñador Industrial', 'Desarrollador Web']}
+            as="span"
+            typingSpeed={75}
+            pauseDuration={1500}
+            deletingSpeed={50}
+            showCursor
+            cursorCharacter="_"
+            cursorBlinkDuration={0.5}
+            className="hidden sm:inline-block text-xs text-gray-500 dark:text-gray-400 !whitespace-nowrap"
+          />
+        </div>
         <div className="flex items-center gap-6">
           <ul className="flex gap-6 text-gray-600 dark:text-gray-400">
             {NAV_LINKS.map(({ href, label }) => (
